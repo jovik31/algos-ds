@@ -1,31 +1,9 @@
-package main
+package main    
 
-import "time"
+import("fmt")
 
-type Book struct {
-	title    string
-	author   string
-	numPages int
-
-	isSaved bool
-	savedAT time.Time
-}
-func (book *Book) saveBook2(){
-
-	book.isSaved = true
-	book.savedAT = time.Now()
-}
-
-func saveBook(book *Book){
-
-	book.isSaved = true
-	book.savedAT = time.Now()
-
-}
-// 1. read data
-// 2. write data
-
-func main() {
-
-
+func main(){
+    y:= []int{1,2,3,4,4,5,6,6}
+    x:= 6
+    fmt.Println(removeElements(&y,x))
 }
