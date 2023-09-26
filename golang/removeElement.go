@@ -7,11 +7,10 @@ func removeElements(nums *[]int, val int) (int, []int) {
 
     for i := 0; i<len(*nums); i++ {
         if (*nums)[i] != val{
-            (*nums)[l] = (*nums)[i]
             l++
-         }  else{
-                (*nums)[i] = 0
-         }
+         }  else{*nums= append((*nums)[:i],(*nums)[i+1:]...)
+            i--}
+
     }
     return l, *nums    
 }
